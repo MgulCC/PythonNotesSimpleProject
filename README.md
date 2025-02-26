@@ -1,93 +1,148 @@
 # examen_python_miguel_carpio
 
+## Requsitos
+Versión Python >= 3.08
+Librerías: Colorama
 
+## Como iniciar la aplicación
+Abre la terminal
+Asegurate de estar situado en el directorio raíz del proyecto
+Una vez estes en el directorio hay que ejecutar el siguiente comando "python main.py" opara iniciar el proyecto
 
-## Getting started
+## funcionalidad de la aplicación
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Al iniciar la aplicación obtendremos un menu como el siguiente:
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+====================
+========Menu Principal========
+====================
+1. Nueva nota
+2. Muestra todas las notas
+3. Busca nota por título
+4. Muestra nota por contenido
+5. Actualiza nota
+6. Elimina nota
+0. Salir
+====================
+[+] Elige una tarea:
 
-## Add your files
+Para elegir una opción simplemente debemos introducir uno de los indices mostrados en el menu:
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+[+] Elige una tarea: 1 
 
-```
-cd existing_repo
-git remote add origin https://gitlab.nfqsolutions.es/nworld/nter/engineering/develop-team/miguel-carpio/examen_python_miguel_carpio.git
-git branch -M master
-git push -uf origin master
-```
+Seguidamente pulsamos enter para aceptar
+A continuación se mostrará las diferentes funcionalidades de la aplicación accediendo con cada índice
 
-## Integrate with your tools
+1 - Nueva nota
+Se nos abrira el siguiente submenu que nos da la opción de volver hacia atrás
+====================
+1. Crear nota
+0. Volver al menú principal
+====================
+[+] Elige una tarea:
 
-- [ ] [Set up project integrations](https://gitlab.nfqsolutions.es/nworld/nter/engineering/develop-team/miguel-carpio/examen_python_miguel_carpio/-/settings/integrations)
+si elegimos la opción 1 nos pedirá que insertemos un título (el título debe ser único)
+[+] Elige una tarea: 1
+Inserte el título de la nota: nota de prueba
 
-## Collaborate with your team
+seguidamente nos pedirá que insertemos el contenido de la nota
+Inserte el contenido: el contenido de mi nota
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Al final obtendremos un mensaje de éxito al crear la nota
+[+] Elige una tarea: 1
+Inserte el título de la nota: nota de prueba
+Inserte el contenido: el contenido de mi nota
+Nota creada exitosamente!
 
-## Test and Deploy
+una vez terminado podremos volver a crear otra nota o regresar al menu principal
 
-Use the built-in continuous integration in GitLab.
+====================
+========Crear nueva nota========
+====================
+1. Crear nota
+0. Volver al menú principal
+====================
+[+] Elige una tarea:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+2 - Muestra todas las notas
+nos muestra todas las notas que están creadas en columna
 
-***
+[+] Elige una tarea: 2
 
-# Editing this README
+Mostrando todas las notas:
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+==============================
+Título: nota de prueba
+Contenido: el contenido de mi nota
+==============================
+==============================
+Título: otra nota de prueba
+Contenido: otro contenido de prueba
+==============================
 
-## Suggestions for a good README
+seguidamente tendremos acceso directamente al nenu principal
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+3 y 4 - Busca por el título o contenido
+Las opciones 3 y 4 funcionan de la misma forma, aunque una es para el título y otra para el contenido
 
-## Name
-Choose a self-explaining name for your project.
+Si elegimos la 3 nos pedirá que introduzcamos un título
+[+] Elige una tarea: 3
+Inserte el título para buscar: nota de prueba
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Si elegimos la 4 nos pedirá que introduzcamos un contenido
+[+] Elige una tarea: 4
+Inserte el contenido a buscar: contenido
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Se buscará por un título o incluso palabra indicada mostrandonos las notas que coinciden
+Notas encontradas:
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+==============================
+Título: nota de prueba
+Contenido: el contenido de mi nota
+==============================
+==============================
+Título: otra nota de prueba
+Contenido: otro contenido de prueba
+==============================
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+5 - Actualizar nota
+La quinta opción nos vuelve ha abrir un submenu
+[+] Elige una tarea: 5
+====================
+========Actualizar nota========
+====================
+1. Actualizar nota
+0. Volver al menú principal
+====================
+[+] Elige una tarea:
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Nos pedirá que introduzcamos el título de la nota que queremos actualizar (debe ser el título entero, nada de palabras sueltas)
+[+] Elige una tarea: 1
+Inserte el título de la nota a actualizar: nota de prueba
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Al sinsertar el título nos pedirá el contenido nuevo para actualizar y mostrará el mensaje de realizado
+[+] Elige una tarea: 1
+Inserte el título de la nota a actualizar: nota de prueba
+Ingrese el nuevo contenido: actualizo contenido
+Nota actualizada correctamente.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+6 - Eliminar
+La forma de eliminar es muy parecida a la actualización, abre un submenu también
+[+] Elige una tarea: 6
+====================
+========Eliminar nota========
+====================
+1. Eliminar nota
+0. Volver al menú principal
+====================
+[+] Elige una tarea:
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Al elegir la tarea de eleiminar nos pedirá que demos el título de la nota (debe ser el título entero, nada de palabras sueltas)
+[+] Elige una tarea: 1
+Inserte el título de la nota a eliminar: nota de prueba
+Nota eliminada correctamente.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+0 - salir
+Como su nombre indica se usa para cerrar la aplicación y que deje de funcionar
+[+] Elige una tarea: 0
+Salir del programa ... Cerrando

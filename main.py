@@ -29,27 +29,36 @@ def main():
             print(Fore.YELLOW + "\nMostrando todas las notas:\n" + Style.RESET_ALL)
             NoteBook.display_notes(notes)
 
+
         elif choice == "3":
             title = input(Fore.CYAN + "Inserte el título para buscar: " + Fore.WHITE)
-            notes = NoteBook.load_notes()
-            found_notes = [note for note in notes.values() if note.matches_title(title)]
-            if found_notes:
-                print(Fore.YELLOW + "\nNotas encontradas:\n" + Style.RESET_ALL)
-                for note in found_notes:
-                    print(note)
+            # Validar si el título está vacío
+            if not title.strip():
+                print(Fore.RED + "El título no puede estar vacío." + Style.RESET_ALL)
             else:
-                print(Fore.RED + "No se encontró ninguna nota con ese título." + Style.RESET_ALL)
+                notes = NoteBook.load_notes()
+                found_notes = [note for note in notes.values() if note.matches_title(title)]
+                if found_notes:
+                    print(Fore.YELLOW + "\nNotas encontradas:\n" + Style.RESET_ALL)
+                    for note in found_notes:
+                        print(note)
+                else:
+                    print(Fore.RED + "No se encontró ninguna nota con ese título." + Style.RESET_ALL)
 
         elif choice == "4":
             content = input(Fore.CYAN + "Inserte el contenido a buscar: " + Fore.WHITE)
-            notes = NoteBook.load_notes()
-            found_notes = [note for note in notes.values() if note.matches_content(content)]
-            if found_notes:
-                print(Fore.YELLOW + "\nNotas encontradas:\n" + Style.RESET_ALL)
-                for note in found_notes:
-                    print(note)
+            # Validar si el contenido está vacío
+            if not content.strip():
+                print(Fore.RED + "El contenido no puede estar vacío." + Style.RESET_ALL)
             else:
-                print(Fore.RED + "No se encontraron notas con ese contenido." + Style.RESET_ALL)
+                notes = NoteBook.load_notes()
+                found_notes = [note for note in notes.values() if note.matches_content(content)]
+                if found_notes:
+                    print(Fore.YELLOW + "\nNotas encontradas:\n" + Style.RESET_ALL)
+                    for note in found_notes:
+                        print(note)
+                else:
+                    print(Fore.RED + "No se encontraron notas con ese contenido." + Style.RESET_ALL)
 
         elif choice == "5":
             update_note_submenu()
@@ -80,7 +89,7 @@ def create_note_submenu():
             title = input(Fore.CYAN + "Inserte el título de la nota: " + Fore.WHITE)
             content = input(Fore.CYAN + "Inserte el contenido: " + Fore.WHITE)
             ManageNotes.create_note(title, content)
-            print(Fore.GREEN + "Nota creada exitosamente!" + Style.RESET_ALL)
+            print(Fore.GREEN + "Nota creada exitosamente" + Style.RESET_ALL)
 
         elif choice == "0":
             break
