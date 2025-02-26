@@ -8,7 +8,7 @@ init()
 def main():
     while True:
         print(Fore.GREEN + "=" * 20)
-        print(Fore.CYAN + "=" * 8 + "Menu" + "=" * 8)
+        print(Fore.CYAN + "=" * 8 + "Menu Principal" + "=" * 8)
         print(Fore.GREEN + "=" * 20)
         print(Fore.GREEN + "1." + Fore.GREEN + " Nueva nota")
         print(Fore.GREEN + "2." + Fore.GREEN + " Muestra todas las notas")
@@ -22,10 +22,7 @@ def main():
         choice = input(Fore.CYAN + "[+] Elige una tarea: " + Fore.WHITE)
 
         if choice == "1":
-            title = input(Fore.CYAN + "Inserte el título de la nota: " + Fore.WHITE)
-            content = input(Fore.CYAN + "Inserte el contenido: " + Fore.WHITE)
-            ManageNotes.create_note(title, content)
-            print(Fore.GREEN + "Nota creada" + Style.RESET_ALL)
+            create_note_submenu()
 
         elif choice == "2":
             notes = NoteBook.load_notes()
@@ -55,16 +52,82 @@ def main():
                 print(Fore.RED + "No se encontraron notas con ese contenido." + Style.RESET_ALL)
 
         elif choice == "5":
+            update_note_submenu()
+
+        elif choice == "6":
+            delete_note_submenu()
+
+        elif choice == "0":
+            print(Fore.BLUE + "Salir del programa ... Cerrando" + Style.RESET_ALL)
+            break
+
+        else:
+            print(Fore.RED + "Opción no válida. Inténtelo de nuevo." + Style.RESET_ALL)
+
+# submenu para crear
+def create_note_submenu():
+    while True:
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.CYAN + "=" * 8 + "Crear nueva nota" + "=" * 8)
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.GREEN + "1." + Fore.GREEN + " Crear nota")
+        print(Fore.GREEN + "0." + Fore.GREEN + " Volver al menú principal")
+        print(Fore.GREEN + "=" * 20)
+
+        choice = input(Fore.CYAN + "[+] Elige una tarea: " + Fore.WHITE)
+
+        if choice == "1":
+            title = input(Fore.CYAN + "Inserte el título de la nota: " + Fore.WHITE)
+            content = input(Fore.CYAN + "Inserte el contenido: " + Fore.WHITE)
+            ManageNotes.create_note(title, content)
+            print(Fore.GREEN + "Nota creada exitosamente!" + Style.RESET_ALL)
+
+        elif choice == "0":
+            break
+
+        else:
+            print(Fore.RED + "Opción no válida. Inténtelo de nuevo." + Style.RESET_ALL)
+
+# submenu para actualizar
+def update_note_submenu():
+    while True:
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.CYAN + "=" * 8 + "Actualizar nota" + "=" * 8)
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.GREEN + "1." + Fore.GREEN + " Actualizar nota")
+        print(Fore.GREEN + "0." + Fore.GREEN + " Volver al menú principal")
+        print(Fore.GREEN + "=" * 20)
+
+        choice = input(Fore.CYAN + "[+] Elige una tarea: " + Fore.WHITE)
+
+        if choice == "1":
             title = input(Fore.CYAN + "Inserte el título de la nota a actualizar: " + Fore.WHITE)
             update_content = input(Fore.CYAN + "Ingrese el nuevo contenido: " + Fore.WHITE)
             ManageNotes.update_note(title, update_content)
 
-        elif choice == "6":
+        elif choice == "0":
+            break
+
+        else:
+            print(Fore.RED + "Opción no válida. Inténtelo de nuevo." + Style.RESET_ALL)
+
+# submenu para eliminar
+def delete_note_submenu():
+    while True:
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.CYAN + "=" * 8 + "Eliminar nota" + "=" * 8)
+        print(Fore.GREEN + "=" * 20)
+        print(Fore.GREEN + "1." + Fore.GREEN + " Eliminar nota")
+        print(Fore.GREEN + "0." + Fore.GREEN + " Volver al menú principal")
+        print(Fore.GREEN + "=" * 20)
+
+        choice = input(Fore.CYAN + "[+] Elige una tarea: " + Fore.WHITE)
+
+        if choice == "1":
             title = input(Fore.CYAN + "Inserte el título de la nota a eliminar: " + Fore.WHITE)
             ManageNotes.delete_note(title)
 
         elif choice == "0":
-            print(Fore.BLUE + "Salir del programa ... Cerrando" + Style.RESET_ALL)
             break
 
         else:
