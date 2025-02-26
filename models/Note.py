@@ -12,5 +12,5 @@ class Note:
         return search_title.lower() in self.title.lower()
 
     def matches_content(self, search_content):
-        # verificado de si el contenido coincide con el contenido
+        # verificado de si el contenido coincide con el contenido o una palabra dentro de la nota
         return search_content.lower() in self.content.lower()
