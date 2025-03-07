@@ -20,14 +20,14 @@ class ManageNotes:
         try:
             # Intenta guardar las notas en un archivo JSON, podria dar el error por permisos de archivo o almacenamiento
             with open(ManageNotes.FILE_PATH, "w") as file:
-                # el obejeto note lo guarda como diccionario y lo añade al JSON
+                # el objeto note lo guarda como diccionario y lo añade al JSON
                 json.dump({title: note.__dict__ for title, note in notes.items()}, file, indent=4)
         except Exception as e:
             print(f"Error al guardar las notas: {e}")
 
     @staticmethod
     def create_note(title, content):
-        # Trae todas las notas y promero comprueba que no existe una con el mismo titulo
+        # Trae todas las notas y primero comprueba que no existe una con el mismo titulo
         notes = NoteBook.load_notes()
         if title in notes:
             print("La nota con este título ya existe.")

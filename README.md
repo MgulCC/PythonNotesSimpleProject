@@ -137,7 +137,7 @@ La forma de eliminar es muy parecida a la actualización, abre un submenu tambi�
 ====================
 [+] Elige una tarea:
 
-Al elegir la tarea de eleiminar nos pedirá que demos el título de la nota (debe ser el título entero, nada de palabras sueltas)
+Al elegir la tarea de eliminar nos pedirá que demos el título de la nota (debe ser el título entero, nada de palabras sueltas)
 [+] Elige una tarea: 1
 Inserte el título de la nota a eliminar: nota de prueba
 Nota eliminada correctamente.
